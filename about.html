@@ -49,7 +49,7 @@
             <p>&nbsp;</p><p>In addition to enabling distributed rendering, this architecture makes it extremely simple to integrate MoonRay in a wide variety of client applications. Much easier than if the entire core rendering libraries needed integration with the client application.</p>
    
             <h3>XPU Mode</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus id.</p>
+            <p>MoonRay's XPU mode is the industry's first true production capable GPU accelerated renderer.  XPU mode achieves 100% output matching with non-GPU modes and incorporates a graceful fallback-to-CPU mechanism if the GPU has insufficient memory for the scene or other GPU error occurs.  XPU treats the GPU like an additional co-processor, submitting work to it while load-balancing the work with the CPU cores.</p>
             <h3>Hydra Render Delegate</h3>
             <p>Vitae aliquet nec ullamcorper sit amet risus nullam eget. Rhoncus dolor purus non enim praesent.</p><br/>
             <p>
@@ -57,7 +57,7 @@
               <a href="images/screenshot_island_dark.png" data-fancybox data-caption="&lt;b&gt;USD Manager&lt;/b&gt;&lt;br /&gt;Dark mode"><img src="images/screenshot_island_dark_thumb.png" title="Dark mode" width=48% align=right /></a>
             </p>
             <h3>Checkpoint / Resume Rendering</h3>
-            <p>Nullam ac tortor vitae purus faucibus ornare suspendisse sed. Id velit ut tortor pretium viverra.</p>
+            <p>MoonRay supports time, quality and signal based checkpoints and resume rendering, to handle many common scenarios to stop a render process deliberately to keep rendering time and cost to a very minimum.  MoonRay additionally supports resume of a checkpoint for either adding more samples into the previously rendered image if more samples are needed in order to reduce the noise level, or to recover from accidental job stoppage.</p>
             <h3>Layerable Materials</h3>
             <p>A full suite of DreamWorks' efficient, layerable production materials. These include canonical material types for common use cases such as metals, dielectrics, skin, fabric, hair and more.  Additionally included is a flexible "uber shader" for more complex materials and adapting existing workflows.</p>
             <p>&nbsp;</p><p>These materials can be combined using an arbitrary number of layers to represent significantly more complex material types.  An advanced physical hair material is provided, along with support for layering for both physical and non-physical hair shading models.</p>
@@ -73,7 +73,7 @@
             <h3>Profiling Viewer</h3>
             <p>The standalone Profiling Viewer helps track render performance across a set of canonical images over time.  Useful to spot potential regressions and make informed decisions on functional changes and their impact to optimum render effiency.</p>
             <h3>Deep Images / Cryptomatte</h3>
-            <p>Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Velit dignissim sodales ut eu sem integer vitae.</p>
+            <p>MoonRay supports full deep image output, supporting both the standard .EXR deep format and the coverage-mask based OpenDCX extension.  Deep image output is supported for both hard surfaces and volumes in the scene, enabling sophisticated compositing of both.  MoonRay also supports output of Cryptomatte files for generation of ID mattes.</p>
             <h3>Light Filters</h3>
             <p>Sit amet volutpat consequat mauris. Placerat in egestas erat imperdiet sed euismod nisi porta lorem.</p>
             <h3>Adaptive and Uniform Sampling</h3>
