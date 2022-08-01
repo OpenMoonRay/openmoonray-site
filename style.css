@@ -228,6 +228,10 @@ a {
   background:white url(images/d3_flight.png) left top no-repeat;
 }
 
+#banner.badguys_loot {
+  background:white url(images/badguys_loot.png) left top no-repeat;
+}
+
 #banner.trolls {
   background:white url(images/trolls.png) left top no-repeat;
 }
