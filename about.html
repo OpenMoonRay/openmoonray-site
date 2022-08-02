@@ -49,7 +49,7 @@
             <h3>XPU Mode</h3>
             <p>MoonRay's XPU mode is the industry's first true production capable GPU accelerated renderer.  XPU mode achieves 100% output matching with non-GPU modes and incorporates a graceful fallback-to-CPU mechanism if the GPU has insufficient memory for the scene or other GPU error occurs.  XPU treats the GPU like an additional co-processor, submitting work to it while load-balancing the work with the CPU cores.</p>
             <h3>Hydra Render Delegate</h3>
-            <p>MoonRay comes with a Hydra Render Delegate for interactive preview rendering, that is compatible with any Hydra API supporting DCC tool.  Upon finalization of the Hydra API specification, MoonRay will provide support for final frame batch rendering, and it's Hydra Render Delegate will be the supported path to transform USD into MoonRay's internal Lua-based RDL scene format.</p><br/>
+            <p>MoonRay comes with a Hydra Render Delegate that is compatible with any DCC tool with Hydra support, for interactive preview rendering. Upon finalization of the Hydra API specification, MoonRay will provide support for final frame batch rendering, and its Hydra Render Delegate will be the supported path to transform USD into MoonRay's internal RDL scene format.</p><br/>
             <h3>Checkpoint / Resume Rendering</h3>
             <p>MoonRay supports time, quality and signal based checkpoint rendering, to provide maximal control in many common scenarios.  These options allow for stopping a render process deliberately in order to control rendering time and cost. MoonRay additionally supports resume of a checkpoint for either adding more samples into the previously rendered image if more samples are needed in order to reduce the noise level, or to recover from unintended job stoppage.</p>
             <h3>Display Filters</h3>
@@ -71,7 +71,7 @@
             <h3>Deep Images / Cryptomatte</h3>
             <p>MoonRay supports full deep image output, supporting both the standard .EXR deep format and the coverage-mask based OpenDCX extension. Deep image output is supported for both hard surfaces and volumes in the scene, enabling sophisticated compositing workflows. MoonRay also supports output of Cryptomatte files for generation of ID mattes.</p>
             <h3>Light Filters</h3>
-            <p>MoonRay supports a full set of advanced light filters for full artistic expression, including Barn Door, Cookie (orthographic and projection), Gobo, Rod and more.</p>
+            <p>MoonRay supports a full set of advanced light filters for full artistic expression, including Barn Door, Cookie (both isometric and projective modes), Gobo, Rod and more.  Multiple light filters may be combined together with multiply, min, max, add, or subtract operations.</p>
             <p>
               <a href="images/orthocookie1.png" data-fancybox data-caption="&lt;b&gt;Cookie Light Filter (Orthographic)&lt;/b&gt;&lt;br /&gt;Cookie Light Filter (Orthographic)"><img src="images/orthocookie1_thumb.png" title="Cookie Light Filter (Orthographic)" width=48% /></a>
               <a href="images/perspcookie1.png" data-fancybox data-caption="&lt;b&gt;Cookie Light Filter (Perspective)&lt;/b&gt;&lt;br /&gt;Cookie Light Filter (Perspective)"><img src="images/perspcookie1_thumb.png" title="Cookie Light Filter (Perspective)" width=48% align=right /></a>
