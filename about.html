@@ -54,15 +54,15 @@
             <p>MoonRay comes with a Hydra Render Delegate for interactive preview rendering, that is compatible with any Hydra API supporting DCC tool.  Upon finalization of the Hydra API specification, MoonRay will provide support for final frame batch rendering, and it's Hydra Render Delegate will be the supported path to transform USD into MoonRay's internal Lua-based RDL scene format.</p><br/>
             <h3>Checkpoint / Resume Rendering</h3>
             <p>MoonRay supports time, quality and signal based checkpoints and resume rendering, to handle many common scenarios to stop a render process deliberately to keep rendering time and cost to a very minimum.  MoonRay additionally supports resume of a checkpoint for either adding more samples into the previously rendered image if more samples are needed in order to reduce the noise level, or to recover from unintended job stoppage.</p>
-            <h3>Layerable Materials</h3>
-            <p>A full suite of DreamWorks' efficient, layerable production materials. These include canonical material types for common use cases such as metals, dielectrics, skin, fabric, hair and more.  Additionally included is a flexible, general-purpose shader for more complex materials and adapting existing workflows.  These materials can be combined using an arbitrary number of layers to represent significantly more complex material types.</p>
-            <p>&nbsp;</p><p>MoonRay's flexible material shading API allows for easy development of customized material shaders and supports many popular shading models.  Materials in MoonRay can be built up from a combination of reflection and transmission lobes, with subsurface scattering and emission, using the provided API.  Additional lobes can be added with automatic energy conservation and/or custom weighting if non-physical behavior is desired.</p>
             <h3>Display Filters</h3>
             <p>MoonRay provides a set of Display Filters which can serve as compositing nodes that can be piped from AOVs in Moonray along with other Display Filters, which allows progressive refinement in an artist's interactive render session. Useful for non-photoreal and compositing workflows.</p>
             <p>
               <a href="images/display_filters.png" data-fancybox data-caption="&lt;b&gt;Display Filters&lt;/b&gt;&lt;br /&gt;Bounce Light"><img src="images/display_filters_thumb.png" title="Bounce Light" width=48% /></a>
               <a href="images/display_filters2.png" data-fancybox data-caption="&lt;b&gt;Display Filters&lt;/b&gt;&lt;br /&gt;Toon Filter"><img src="images/display_filters2_thumb.png" title="Toon Filter" width=48% align=right /></a>
             </p>
+            <h3>Layerable Materials</h3>
+            <p>A full suite of DreamWorks' efficient, layerable production materials. These include canonical material types for common use cases such as metals, dielectrics, skin, fabric, hair and more.  Additionally included is a flexible, general-purpose shader for more complex materials and adapting existing workflows.  These materials can be combined using an arbitrary number of layers to represent significantly more complex material types.</p>
+            <p>&nbsp;</p><p>MoonRay's flexible material shading API allows for easy development of customized material shaders and supports many popular shading models.  Materials in MoonRay can be built up from a combination of reflection and transmission lobes, with subsurface scattering and emission, using the provided API.  Additional lobes can be added with automatic energy conservation and/or custom weighting if non-physical behavior is desired.</p>
           </div>
 
           <div class="feature-right">
