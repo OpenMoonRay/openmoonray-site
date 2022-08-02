@@ -19,7 +19,7 @@ function insertInfoPane() {
         // contact info
         html += '<div id="sidebar-contact">';
         html += '<h3>Contacts</h3>';
-        html += '<p><a href="mailto:moonray@dreamworks.com">moonray@dreamworks.com</a></p>';
+        html += '<p><a href="mailto:MoonRay@dreamworks.com">MoonRay@dreamworks.com</a></p>';
         html += '</div>';
         
         el.innerHTML = html;
