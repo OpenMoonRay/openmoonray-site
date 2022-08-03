@@ -84,7 +84,7 @@
               <a href="images/perspcookie2.png" data-fancybox data-caption="&lt;b&gt;Cookie Light Filter (Perspective)&lt;/b&gt;&lt;br /&gt;"><img src="images/perspcookie2_thumb.png" title="Cookie Light Filter (Perspective)" width=48% align=right /></a>
             </p>
             <h3>Adaptive and Uniform Sampling</h3>
-            <p>MoonRay supports uniform sampling that generates a pre-determined number of pixel, lens, and time samples for each pixel. Uniform samples are always a perfect square.  MoonRay also supports adaptive sampling, measuring the error in the beauty frame buffer to determine when to stop generating primary samples, taking an efficient non-local view of the frame buffer to eliminate artifacts.  Additionally, MoonRay performs filter importance sampling, warping pixel samples before tracing the rays instead of filtering when recording samples into the frame buffer.</p>
+            <p>MoonRay supports uniform and adaptive sampling. Adaptive sampling measures the error in the frame buffer to determine when to stop generating primary samples, taking an efficient non-local view of the frame buffer to eliminate artifacts.</p>
             <h3>Vectorization</h3>
             <p>MoonRay was designed from the beginning to fully leverage Single Instruction/Multiple Data (SIMD) vector units throughout. To achieve high SIMD efficiency, we employ Embree for tracing rays and vectorize the remaining compute-intensive components of the renderer: the integrator, the shading system and shaders, and the texturing engine. Queuing is used to help keep all vector lanes full and improve data coherency.</p>
             <h3>Light Path Expressions / AOVs</h3>
