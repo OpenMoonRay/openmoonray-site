@@ -232,6 +232,13 @@ a {
   background:white url(images/badguys_loot.png) left top no-repeat;
 }
 
+#banner.badguys_city {
+  background:white url(images/badguys_city2.png) left top no-repeat;
+}
+
+#banner.trolls_beach {
+  background:white url(images/trolls2_beach.png) left top no-repeat;
+}
 #banner.trolls {
   background:white url(images/trolls.png) left top no-repeat;
 }
