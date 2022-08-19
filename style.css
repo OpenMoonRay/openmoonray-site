@@ -383,6 +383,12 @@ a {
   padding-left: 20px;
 }
 
+.bulleted2 {
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
 ul {
   list-style-type: disc;
 }
