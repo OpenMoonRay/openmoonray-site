@@ -22,47 +22,33 @@
         <div id="navigation-bar">
           <a href="index">Home</a>
           <a href="about">About</a>
+          <a class="on" href="faq">FAQ</a>
           <a href="documentation">Documentation</a>
           <a href="license">License</a>
           <a href="download">Download</a>
-          <a class="on" href="faq">FAQ</a>
         </div>
       </div>
       <div id="banner" class="d3_flight"></div>
     </div>
     <div id="page">
       <div id="content">
-        <h1>About MoonRay</h1>
+        <h1>Frequently Asked Questions</h1>
         <hr/>
         <div class="section">
-          <p>DreamWorks’ in-house Monte Carlo Path Tracer, MoonRay, was designed from the start with a focus on efficiency and scalability, with the mantra to “...keep all the vector lanes of all the cores of all the machines busy all the time with meaningful work”, as well as provide modern features for full artistic expression.  It can deliver a broad range of images from photorealistic to strongly stylized.  MoonRay is built on a leading-edge, highly-scalable architecture with no prior legacy code, allowing quick, feature-film quality artistic iteration using familiar tools. Additional  high-performance features include support for distributed rendering, a pixel matching XPU mode that offers improved performance by processing bundles of rays on the GPU as well as the CPU, and bundled path tracing. MoonRay includes a Hydra Render Delegate for integration into content creation tools that support the standard.</p>       
-          <p>
-            <a href="images/vectorized.png" data-fancybox data-caption="&lt;b&gt;Vectorized MoonRay&lt;/b&gt;"><img src="images/vectorized.png" title="Vectorized MoonRay" width=600 /></a>
-          </p>
-        </div> <!-- end section -->
-        <div class="section">
-          <h2>Features</h2>
           <div class="feature">
-            <h3>Distributed Rendering</h3>
-            <p>Arras is our cloud-based framework that we use for distributing rendering tasks to a cluster or cloud. Client programs make use of an extremely thin and portable Arras SDK to connect to an Arras rendering session, which is a cluster of one or more computation nodes.  In the cluster there is a single MoonRay merge node which is responsible for sending final rendering results back to the client.</p>
-            <p>&nbsp;</p><p>In addition to enabling distributed rendering, this architecture makes it extremely simple to integrate MoonRay in a wide variety of client applications. Much easier than if the entire core rendering libraries needed integration with a client application.</p>
-            <h3>Display Filters</h3>
-            <p>MoonRay provides a set of Display Filters which can serve as compositing nodes that can be piped from AOVs in Moonray along with other Display Filters, which allows progressive refinement in an artist's interactive render session. Useful for non-photoreal and compositing workflows.</p>
-            <p>
-              <a href="images/display_filters.png" data-fancybox data-caption="&lt;b&gt;Display Filters&lt;/b&gt;&lt;br /&gt;Bounce Light"><img src="images/display_filters_thumb.png" title="Bounce Light" width=48% /></a>
-              <a href="images/display_filters2.png" data-fancybox data-caption="&lt;b&gt;Display Filters&lt;/b&gt;&lt;br /&gt;Toon Filter"><img src="images/display_filters2_thumb.png" title="Toon Filter" width=48% align=right /></a>
-            </p>
-            <h3>XPU Mode</h3>
-            <p>MoonRay's XPU mode is a pixel-matching, production capable GPU accelerated renderer. XPU mode achieves 100% output matching with non-GPU modes and incorporates a graceful fallback-to-CPU mechanism if the GPU has insufficient memory for the scene or other GPU error occurs. XPU treats the GPU like an additional co-processor, submitting work to it while load-balancing the work with the CPU cores.</p>
-            <h3>Hydra Render Delegate</h3>
-            <p>MoonRay comes with a Hydra Render Delegate that is compatible with any DCC tool with Hydra support, for interactive preview rendering. Upon finalization of the Hydra API specification, MoonRay will provide support for final frame batch rendering, and its Hydra Render Delegate will be the supported path to transform USD into MoonRay's internal RDL scene format.</p><br/>
-             <h3>Layerable Materials</h3>
-            <p>A full suite of DreamWorks' efficient, layerable production materials. These include canonical material types for common use cases such as metals, dielectrics, skin, fabric, hair and more. Additionally included is a flexible, general-purpose shader for more complex materials and adapting existing workflows.  These materials can be combined using an arbitrary number of layers to represent significantly more complex material types.  MoonRay's flexible material shading API allows for easy development of customized material shaders and supports many popular shading models.</p>
-            <p>                        
-              <a href="images/layering.png" data-fancybox data-caption="&lt;b&gt;A few example layered materials&lt;/b&gt;&lt;br /&gt;"><img src="images/layering_thumb.png" width=100% /></a>
-            </p>            
-            <h3>Checkpoint / Resume Rendering</h3>
-            <p>MoonRay supports time, quality and signal based checkpoint rendering, to provide maximal control in many common scenarios.  These options allow for stopping a render process deliberately in order to control rendering time and cost. MoonRay additionally supports resume of a checkpoint for either adding more samples into the previously rendered image if more samples are needed in order to reduce the noise level, or to recover from unintended job stoppage.</p>
+            <h3>Will MoonRay be integrated into [a third-party application]?</h3>
+            <p>MoonRay’s development team at DreamWorks has been developing and supporting a Hydra delegate, hdMoonRay, as our canonical source for DCC integration. This is included in the open-source release, though many DCC applications have not yet been tested (please let us know of any successes or problems).  We will update to version 2 of the Hydra standard as soon as feasible.</p>
+            <p>&nbsp;</p><p>Custom DCC integrations can also be developed via MoonRay’s robust API.  MoonRay can be run from the command-line with or without a GUI window using the internal RDL scene description language.</p>
+            <h3>Is MoonRay free to use?</h3>
+            <p>In line with the <a href="license">Apache version 2 license</a>, MoonRay is free to use and modify for both independent and commercial use.</p>
+            <h3>Is MoonRay in active development at DreamWorks?</h3>
+            <p>Yes!  MoonRay is the robust and efficient renderer used for all DreamWorks Animation feature movies. It has a full-time development staff at DreamWorks Animation, focused on those productions and contributions from the open-source community.</p>
+            <h3>Can I contribute to the development of MoonRay?</h3>
+            <p>DreamWorks Animation is happy to welcome community improvements to the MoonRay codebase! The MoonRay GitHub repository will provide guidance on contributions and how to become a contributor.</p><br/>
+            <h3>What are the minimum hardware requirements for MoonRay?</h3>
+            <p>MoonRay targets x86-64 hardware with AVX2.  AVX1 runs but is not supported and will not be as efficient.</p>          
+            <h3>What are the minimum software requirements?</h3>
+            <p>MoonRay currently runs on Linux and is compiled with C++17 and Intel’s <a href="https://ispc.github.io/"ISPC</a>. MoonRay is continually built inside DreamWorks Animation with GCC, Intel’s ICC and Clang.</p>
             <h3>Volume Rendering</h3>
             <p>MoonRay supports rendering of participating media such as fog, fire, smoke, clouds, and dust. Features include homogenous and heterogenous media, decoupled ray marching, equiangular sampling, importance sampled emission, art-directable multiple scattering, overlapping volumes, linear and frustum transforms, motion blur, anisotropic scattering, and OpenVDB file input and baking.</p>
           </div>
