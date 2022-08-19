@@ -36,8 +36,8 @@
         <hr/>
         <div class="section">
           <div class="feature">
-            <h3>Will MoonRay be integrated into [a third-party application]?</h3>
-            <p>MoonRay’s development team at DreamWorks has been developing and supporting a Hydra delegate, hdMoonRay, as our canonical source for DCC integration. This is included in the open-source release, though many DCC applications have not yet been tested (please let us know of any successes or problems).  We will update to version 2 of the Hydra standard as soon as feasible.</p>
+            <h3>Will MoonRay be integrated into... [third-party application]?</h3>
+            <p>MoonRay’s engineering team at DreamWorks has been developing and supporting a Hydra delegate, hdMoonRay, as our canonical source for DCC integration. This is included in the open-source release, though many DCC applications have not yet been tested (please let us know of any successes or problems).  We will update to version 2 of the Hydra standard as soon as feasible.</p>
             <p>&nbsp;</p><p>Custom DCC integrations can also be developed via MoonRay’s robust API.  MoonRay can be run from the command-line with or without a GUI window using the internal RDL scene description language.</p>
             <h3>Is MoonRay free to use?</h3>
             <p>In line with the <a href="license">Apache version 2 license</a>, MoonRay is free to use and modify for both independent and commercial use.</p>
@@ -49,30 +49,25 @@
             <p>MoonRay targets x86-64 hardware with AVX2.  AVX1 runs but is not supported and will not be as efficient.</p>          
             <h3>What are the minimum software requirements?</h3>
             <p>MoonRay currently runs on Linux and is compiled with C++17 and Intel’s <a href="https://ispc.github.io/"ISPC</a>. MoonRay is continually built inside DreamWorks Animation with GCC, Intel’s ICC and Clang.</p>
-            <h3>Volume Rendering</h3>
-            <p>MoonRay supports rendering of participating media such as fog, fire, smoke, clouds, and dust. Features include homogenous and heterogenous media, decoupled ray marching, equiangular sampling, importance sampled emission, art-directable multiple scattering, overlapping volumes, linear and frustum transforms, motion blur, anisotropic scattering, and OpenVDB file input and baking.</p>
           </div>
 
           <div class="feature-right">
-            <h3>Profiling Viewer</h3>
-            <p>The standalone Profiling Viewer helps track render performance across a set of canonical tests over time.  This tool provides a graphical overview of multiple render logs with flexible options for filtering the results, allowing developers to easily track changes in performance and pinpoint which stages of the render process are impacted.</p>
-          <p>
-              <a href="images/profile_viewer.png" data-fancybox data-caption="&lt;b&gt;Profile Viewer&lt;/b&gt;&lt;br /&gt;Profile Viewer"><img src="images/profile_viewer_thumb.png" title="Profile Viewer" width=100% /></a>
-          </p>
-            <h3>Deep Images / Cryptomatte</h3>
-            <p>MoonRay supports full deep image output, supporting both the standard .EXR deep format and the coverage-mask based OpenDCX extension. Deep image output is supported for both hard surfaces and volumes in the scene, enabling sophisticated compositing workflows. MoonRay also supports output of Cryptomatte files for generation of ID mattes.</p>
-            <h3>Light Filters</h3>
-            <p>MoonRay supports a set of advanced light filters for full artistic expression, including Barn Door, Cookie (both isometric and projective modes), Gobo, Rod and more.  Multiple light filters may be combined together with multiply, min, max, add, or subtract operations.</p>
-            <p>
-              <a href="images/orthocookie1.png" data-fancybox data-caption="&lt;b&gt;Cookie Light Filter (Orthographic)&lt;/b&gt;&lt;br /&gt;"><img src="images/orthocookie1_thumb.png" title="Cookie Light Filter (Orthographic)" width=48% /></a>
-              <a href="images/perspcookie1.png" data-fancybox data-caption="&lt;b&gt;Cookie Light Filter (Perspective)&lt;/b&gt;&lt;br /&gt;"><img src="images/perspcookie1_thumb.png" title="Cookie Light Filter (Perspective)" width=48% align=right /></a>
-            </p>
-            <p>
-              <a href="images/orthocookie2.png" data-fancybox data-caption="&lt;b&gt;Cookie Light Filter (Orthographic)&lt;/b&gt;&lt;br /&gt;"><img src="images/orthocookie2_thumb.png" title="Cookie Light Filter (Orthographic)" width=48% /></a>
-              <a href="images/perspcookie2.png" data-fancybox data-caption="&lt;b&gt;Cookie Light Filter (Perspective)&lt;/b&gt;&lt;br /&gt;"><img src="images/perspcookie2_thumb.png" title="Cookie Light Filter (Perspective)" width=48% align=right /></a>
-            </p>
-            <h3>Adaptive and Uniform Sampling</h3>
-            <p>MoonRay supports uniform and adaptive sampling. Adaptive sampling measures the error in the frame buffer to determine when to stop generating primary samples, taking an efficient non-local view of the frame buffer to eliminate artifacts.</p>
+            <h3>Do I need to use MoonRay’s GPU hardware acceleration?</h3>
+            <p>No.  MoonRay performs extremely well without GPU hardware acceleration.</p>
+            <h3>Do the images created with GPU hardware acceleration differ from those created without?</h3>
+            <p>No.  DreamWorks has worked hard to ensure that the images are identical with and without hardware acceleration. </p>
+            <h3>Which hardware does MoonRay’s GPU hardware acceleration support?</h3>
+            <p>MoonRay’s GPU hardware acceleration is implemented through OptiX/CUDA, meaning the hardware acceleration currently requires Nvidia GPUs.</p>
+            <h3>What Operating System versions and variants are currently available?</h3>
+            <p>The DreamWorks build environment consists of the following:
+              <ul>
+                <li>CentOS 7.9.2009</li>
+                <li>Linux kernel 3.10</li>
+                <li>ICC 19 [VFX Reference Platform 2020]</li>
+                <li>GCC 6.3 [VFX Reference Platform 2020]</li>
+                <li>GCC 9.3 [VFX Reference Platform 2021]</li>
+                <li>Clang 13 [VFX Reference Platform 2021]</li>
+              </ul></p>
             <h3>Vectorization</h3>
             <p>MoonRay was designed from the beginning to fully leverage Single Instruction/Multiple Data (SIMD) vector units throughout. To achieve high SIMD efficiency, we employ Embree for tracing rays and vectorize the remaining compute-intensive components of the renderer: the integrator, the shading system and shaders, and the texturing engine. Queuing is used to help keep all vector lanes full and improve data coherency.</p>
             <h3>Light Path Expressions / AOVs</h3>
