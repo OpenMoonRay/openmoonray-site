@@ -408,16 +408,6 @@ ul {
   color: #404040;
 }
 
-.feature h3 {
-  font-size: 14px;
-  font-style: italic;
-  line-height: 18px;
-  color: #000000;
-  font-weight: normal;
-  margin-top: 20px;
-  margin-bottom:1em;
-}
-
 .feature-right {
   display: inline;
   float: left;
@@ -433,8 +423,28 @@ ul {
   color: #404040;
 }
 
-.feature-right h3 {
-  font-size: 14px;
+
+/* ////////////////////////////////////////
+ * FAQ Page
+ */
+
+.faq {
+  display: inline;
+  float: left;
+  width: 270px;
+  margin-right: 60px;
+}
+
+.faq p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 0px;
+  padding: 0px;
+  color: #404040;
+}
+
+.faq h3 {
+  font-size: 18px;
   font-style: italic;
   line-height: 18px;
   color: #000000;
@@ -442,6 +452,33 @@ ul {
   margin-top: 20px;
   margin-bottom:1em;
 }
+
+.faq-right {
+  display: inline;
+  float: left;
+  width: 270px;
+  margin-right: 0px;
+}
+
+.faq-right p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 0px;
+  padding: 0px;
+  color: #404040;
+}
+
+.faq-right h3 {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 18px;
+  color: #000000;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom:1em;
+}
+
+
 
 /* ////////////////////////////////////////
  * News Page
