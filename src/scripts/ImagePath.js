@@ -1,0 +1,47 @@
+export const about_cover = "https://openmoonray.org/images/about_cover.png"
+export const about_displayfilters1 = "https://openmoonray.org/images/about_displayfilters1.png"
+export const about_displayfilters2 = "https://openmoonray.org/images/about_displayfilters2.png"
+export const about_layerableminerals = "https://openmoonray.org/images/about_layerableminerals.png"
+export const about_lightfilter1 = "https://openmoonray.org/images/about_lightfilter1.png"
+export const about_lightfilter2 = "https://openmoonray.org/images/about_lightfilter2.png"
+export const about_lightfilter3 = "https://openmoonray.org/images/about_lightfilter3.png"
+export const about_lightfilter4 = "https://openmoonray.org/images/about_lightfilter4.png"
+export const about_lightpath = "https://openmoonray.org/images/about_lightpath.png"
+export const about_pathtracing = "https://openmoonray.org/images/about_pathtracing.png"
+export const about_profileviewer = "https://openmoonray.org/images/about_profileviewer.png"
+export const documentation_cover = "https://openmoonray.org/images/documentation_cover.png"
+export const documentation_movie1 = "https://openmoonray.org/images/documentation_movie1.png"
+export const documentation_movie2 = "https://openmoonray.org/images/documentation_movie2.png"
+export const documentation_movie3 = "https://openmoonray.org/images/documentation_movie3.png"
+export const documentation_movie4 = "https://openmoonray.org/images/documentation_movie4.png"
+export const documentation_movie5 = "https://openmoonray.org/images/documentation_movie5.png"
+export const documentation_movie6 = "https://openmoonray.org/images/documentation_movie6.png"
+export const documentation_movie7 = "https://openmoonray.org/images/documentation_movie7.png"
+export const documentation_movie8 = "https://openmoonray.org/images/documentation_movie8.png"
+export const documentation_movie9 = "https://openmoonray.org/images/documentation_movie9.png"
+export const documentation_movie10 = "https://openmoonray.org/images/documentation_movie10.png"
+export const documentation_movie11 = "https://openmoonray.org/images/documentation_movie11.png"
+export const documentation_movie12 = "https://openmoonray.org/images/documentation_movie12.png"
+export const documentation_movie13 = "https://openmoonray.org/images/documentation_movie13.png"
+export const documentation_movie14 = "https://openmoonray.org/images/documentation_movie14.png"
+export const documentation_movie15 = "https://openmoonray.org/images/documentation_movie15.png"
+export const documentation_movie16 = "https://openmoonray.org/images/documentation_movie16.png"
+export const documentation_movie17 = "https://openmoonray.org/images/documentation_movie17.png"
+export const download_cover = "https://openmoonray.org/images/download_cover.png"
+export const faq_cover = "https://openmoonray.org/images/faq_cover.png"
+export const favicon = "https://openmoonray.org/images/favicon.png"
+export const home_cover = "https://openmoonray.org/images/home_cover.png"
+export const home_paper = "https://openmoonray.org/images/home_paper.png"
+export const home_puss_in_boots = "https://openmoonray.org/images/home_puss_in_boots.jpeg"
+export const home_cloud_guy = "https://openmoonray.org/images/home_footer.png"
+export const license_cover = "https://openmoonray.org/images/license_cover.png"
+export const moonray_logo = "https://maabscorner.com/images/moonray_logo.png"
+export const footer_logo = "https://openmoonray.org/images/dw_logo.png"
+
+
+
+
+
+
+
+
