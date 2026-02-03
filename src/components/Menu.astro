@@ -1,0 +1,127 @@
+---
+import * as Image from '../scripts/ImagePath'
+---
+<head>
+<script type="module">
+  const menuItems = [
+    { name: 'Home', link: '/' },
+    { name: 'About', link: '/about' },
+    { name: 'FAQ', link: '/faq' },
+    { name: 'Documentation', link: '/documentation' },
+    { name: 'License', link: '/license' },
+    { name: 'Download', link: '/download' },
+  ];
+
+  const currentPath = window.location.pathname;
+
+  function getMenuClass(link) {
+    return currentPath === link
+      ? 'block px-4 py-2 rounded-lg bg-dreamworks-blue text-white'
+      : 'block px-4 py-2 rounded-lg hover:bg-gray-100 hover:text-dreamworks-blue';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.getElementById('sidebar');
+    const mobileMenu = document.getElementById('mobilemenu');
+
+    const menuList = menuItems
+      .map(item => {
+        return `
+          <li>
+            <a href="${item.link}" class="${getMenuClass(item.link)}">
+              ${item.name}
+            </a>
+          </li>
+        `;
+      })
+      .join('');
+
+    sidebar.innerHTML = ` 
+      <ul class="space-y-4"> 
+        <li> <img src="https://openmoonray.org/images/moonray_logo.png" alt="Icon" class="mb-10 h-52 w-auto" /> 
+        </li> 
+        ${menuList} 
+      </ul> 
+      <div class="mt-10 pb-8 text-left"> 
+      <div class="border-b border-gray-300 pb-1 mb-3 font-semibold"> Contacts </div> 
+      <a href="mailto:MoonRay@dreamworks.com" class="text-blue-600 underline"> MoonRay@dreamworks.com </a> 
+      </div> `;
+
+    mobileMenu.innerHTML = `
+      <ul class="space-y-4 p-5">
+        ${menuList}
+      </ul>
+      <div class="ml-auto text-right p-3"> 
+        <span class="font-semibold">Contacts:</span> 
+        <a href="mailto:MoonRay@dreamworks.com" class="text-blue-600 underline"> MoonRay@dreamworks.com </a> 
+      </div>
+    `;
+
+    const tham = document.querySelector(".tham");
+    tham.addEventListener('click', () => {
+      tham.classList.toggle('tham-active');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+
+    const logo = document.querySelector("#toggle-button img");
+    logo.classList.add("transition-all", "duration-300");
+    const logoUnderline = document.querySelector("#toggle-button #underline");
+    logoUnderline.classList.add("transition-all", "duration-300");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        logo.classList.remove("h-24");
+        logo.classList.add("h-16");
+        logoUnderline.classList.remove("top-24")
+        logoUnderline.classList.add("top-16")
+        mobileMenu.classList.remove("top-24")
+        mobileMenu.classList.add("top-16")
+
+      } else {
+        logo.classList.remove("h-16");
+        logo.classList.add("h-24");
+        logoUnderline.classList.remove("top-16")
+        logoUnderline.classList.add("top-24")
+        mobileMenu.classList.remove("top-16")
+        mobileMenu.classList.add("top-24")
+      }
+    });
+  });
+</script>
+</head>
+
+<body class="bg-white text-gray-800 pt-20">
+  <!-- Mobile Header -->
+<div
+  id="toggle-button"
+  class="md:hidden bg-white px-4 py-1 fixed top-0 left-0 w-full flex items-center z-50"
+>
+  <div class="tham tham-e-squeeze tham-w-10">
+    <div class="tham-box">
+      <div class="tham-inner"></div>
+    </div>
+  </div>
+
+  <img
+    src={Image.moonray_logo}
+    alt="Icon"
+    class="h-24 object-contain mx-auto"
+  />
+  <div id=underline class="md:hidden top-24 mt-2 fixed left-0 w-full h-1 bg-black"></div>
+
+</div>
+
+
+<div
+  id="mobilemenu"
+  class="hidden fixed top-24 mt-3 left-0 w-full bg-white z-50 outline outline-3 outline-dreamworks-blue"
+></div>
+
+    <!-- Desktop Header -->
+    <div class="hidden md:block"> 
+      <aside id="sidebar" 
+      class="bg-white w-80 h-screen fixed overflow-y-auto">  
+      </aside> 
+    </div>
+    
+</body>
