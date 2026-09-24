@@ -36,6 +36,45 @@ import * as Asset from '../scripts/AssetsPath'
 
 <h1 class="text-3xl font-bold pt-10">News &amp; Releases</h1>
     <NewsItem
+      date="19-July-2029"
+      story="DreamWorks Chief Technology Officer Bill Ballew gave a Keynote speech at the Academy Software Foundation's Open Source Days 2026 conference, on <i>How to Train Your Renderer: MoonRay’s Journey from DreamWorks’ Dragons to the ASWF</i>.    In it, Bill explores the evolution of MoonRay as it transitioned from a proprietary DreamWorks tool to a cornerstone of open-source rendering, and covers the technical challenges of "breaking out" of the studio, the strategy and lessons learned on building a sustainable community, and why the Academy Software Foundation is the vital next chapter for the project and the path forward.  Check out the Keynote below."
+      youTubeVideoURL="https://www.youtube.com/embed/fQUnq6drevw?si=CM4_OV03VBDGJuNO"
+    />
+    <NewsItem
+      date="17-July-2026"
+      story={`
+          <p>
+            MoonRay 2026.29.1 is now available for 
+            <a href="https://github.com/dreamworksanimation/openmoonray/releases/tag/v2026.29.1" class="text-blue-600">download</a>.
+          </p>
+
+          <p>This is a major release:</p>
+
+          <ul class="list-disc list-inside pl-4">
+            <li>This marks the first release using a new versioning scheme. The version number is now in the format of YYYY.WW.PATCH, where YYYY is the the year, WW is the two-digit calendar week, and PATCH
+is the patch number for that week.</li>
+            <li>Contains work-in-progress support for rendering MaterialX shader graphs in MoonRay<li>
+            <li>Added MaterialX map shaders (work in progress)</li>
+            <li>Miscellaneous developer tools enhancements (rdla_gui, rdla_filter, rdla_wedge)</li>
+            <li>Added motion blur support to Rdl geometry dsos</li>
+            <li>Allow toon ramp control in shadow zone</li>
+            <li>Adds texture support for DistantLight</li>
+            <li>Various other documentation updates, bug fixes and improvements</li>
+          </ul>
+
+          <p>
+            See the <a href="https://github.com/dreamworksanimation/openmoonray/discussions/260" class="text-blue-600">release notes</a> for a complete list of changes.
+          </p>`}
+    />
+    <NewsItem
+      date="15-July-2026"
+      story="DreamWorks and Canonical Develop Snap Installer for MoonRay.  More details can be found in the <a href='https://www.aswf.io/blog/dreamworks-and-canonical-develop-snap-installer-for-moonray/' class='text-blue-600'>official announcement here</a>. Check out the <a href='https://snapcraft.io/openmoonray' class='text-blue-600'>MoonRay installer in the Snap Store here</a>.
+    />
+    <NewsItem
+      date="19-May-2026"
+      story="MoonRay Joins the <a href='https://www.aswf.io/' class='text-blue-600'>Academy Software Foundation</a>! More details can be found in the <a href='https://www.aswf.io/news/moonray-dreamworks-animations-open-source-production-renderer-joins-the-academy-software-foundation/'  class='text-blue-600'>official announcement here.</a>   Please note that there are additional, new Community Channels (Slack and Zoom) for the MoonRay project, and we invite anyone to join us in the <a href='https://academysoftwarefdn.slack.com/archives/C0AHKA6E17Z' class='text-blue-600'>#moonray</a> channel on the <a href='https://slack.aswf.io/' class='text-blue-600'>ASWF Slack</a>, and in <a href='https://zoom-lfx.platform.linuxfoundation.org/meetings/moonray?view=month' class='text-blue-600'>MoonRay Technical Steering Committee meetings</a> via Zoom, which are open to the public, for greater discussion and community building.
+    />
+    <NewsItem
       date="24-April-2026"
       story={`
           <p>
